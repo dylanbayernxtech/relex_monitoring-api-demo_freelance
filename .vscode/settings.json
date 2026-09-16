@@ -1,0 +1,27 @@
+﻿{
+    "python.analysis.typeCheckingMode":  "basic",
+    "python.defaultInterpreterPath":  "C:\\Users\\Dylan Kane\\relex_recbktrees_freelance\\relex_monitoring-api-demo_freelance.worktrees\\kane-relex-explorative-work\\kane_relex_explorative_work\\.venv\\Scripts\\python.exe",
+    "editor.formatOnSave":  true,
+    "[python]":  {
+                     "editor.defaultFormatter":  "ms-python.black-formatter",
+                     "editor.codeActionsOnSave":  {
+                                                      "source.organizeImports":  "explicit"
+                                                  }
+                 },
+    "git.confirmSync":  false,
+    "python.analysis.autoImportCompletions":  true,
+    "files.exclude":  {
+                          "**/__pycache__":  true,
+                          "**/.venv":  false
+                      },
+    "terminal.integrated.profiles.windows":  {
+                                                 "PowerShell":  {
+                                                                    "icon":  "terminal-powershell",
+                                                                    "source":  "PowerShell"
+                                                                }
+                                             },
+    "python.terminal.activateEnvironment":  true,
+    "terminal.integrated.defaultProfile.windows":  "PowerShell",
+    "github.gitProtocol":  "https",
+    "git.autofetch":  true
+}
