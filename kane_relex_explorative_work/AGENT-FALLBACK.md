@@ -1,9 +1,17 @@
-# Agent fallback cascade (token insurance)
+# Agent cascade (interview)
 
-1. **VS Code Insiders Copilot / Agents** — strongest model offered in UI.
-2. **xPathfinderLabs (this bot)** — already warm on RELEX context.
-3. **RELEX DS Primary** teammate — senior DS voice, scripts-first.
-4. **RELEX DS Kimi Fallback** teammate — use when others rate-limit; ask for Kimi/kimi-k2.7-code style terse coding help.
-5. Cloud agent models available on account include: claude-opus-5, gpt-5.6-sol, kimi-k2.7-code / kimi-k3.
+No paywall framing — Dylan has free GitHub Copilot tokens, Claude Code, and xPathfinderLabs.
 
-Honest note: nobody can bypass a real paywall/quota. This cascade is how you keep moving when one surface is exhausted.
+## Order of use (live)
+1. **You coding in VS Code Insiders** (primary stage — audience watches this)
+2. **GitHub Copilot / Insiders Agents** — free tokens; pick the strongest model the UI offers first
+3. **Claude Code** — when you want a second coding agent on the same repo/task
+4. **xPathfinderLabs** (this Grok Bot) — RELEX context already warm
+5. **RELEX DS Primary** teammate — senior DS voice
+6. **RELEX DS Kimi Fallback** — only if you want an extra terse coding lane
+
+## Desk
+- Folder: kane-relex-explorative-work worktree
+- Venv: C:\Users\Dylan Kane\.venvs\relex-ds
+- Kernel (if needed): Python (relex-ds)
+- Deliverable bias: scripts-first — see DELIVERABLE-STYLE.md + FINLAND-BAR.md
