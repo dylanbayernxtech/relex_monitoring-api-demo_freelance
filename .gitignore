@@ -1,0 +1,12 @@
+﻿__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+.env
+.pytest_cache/
+.ipynb_checkpoints/
+*.egg-info/
+.DS_Store
+Thumbs.db
+kane_relex_explorative_work/arena/**/_plots/
