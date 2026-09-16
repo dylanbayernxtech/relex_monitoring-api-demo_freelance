@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""safety_stock_overlord — service level, lead time, probabilistic stock."""
+"""safety_stock_overlord - service level, lead time, probabilistic stock."""
 from __future__ import annotations
 
 import numpy as np
@@ -25,7 +25,7 @@ def main() -> int:
         # Monte Carlo: stockouts over lead time
         lt_demand = rng.normal(mu * lead, sigma * np.sqrt(lead), size=8000).clip(0)
         fill = float((lt_demand <= rop).mean())
-        print(f"  SL_target={sl:.0%}  SS={ss:.1f}  ROP={rop:.1f}  MC_in_stock≈{fill:.1%}")
+        print(f"  SL_target={sl:.0%}  SS={ss:.1f}  ROP={rop:.1f}  MC_in_stock?{fill:.1%}")
 
     # waste vs stockout tradeoff sketch
     holding_cost = 0.4  # per unit over-stock at LT end
@@ -37,8 +37,8 @@ def main() -> int:
         cost = holding_cost * excess + stockout_cost * short
         if best is None or cost < best[0]:
             best = (cost, q, excess, short)
-    print(f"  cost_min≈{best[0]:.2f} at Q={best[1]:.1f}  E[waste]={best[2]:.1f} E[stockout]={best[3]:.1f}")
-    print("OK safety_stock_overlord — service levels & waste/stockout tradeoff")
+    print(f"  cost_min?{best[0]:.2f} at Q={best[1]:.1f}  E[waste]={best[2]:.1f} E[stockout]={best[3]:.1f}")
+    print("OK safety_stock_overlord - service levels & waste/stockout tradeoff")
     return 0
 
 

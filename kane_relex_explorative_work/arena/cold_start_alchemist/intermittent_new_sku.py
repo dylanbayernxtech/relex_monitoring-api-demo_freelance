@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""cold_start_alchemist — new SKU + intermittent demand tricks."""
+"""cold_start_alchemist - new SKU + intermittent demand tricks."""
 from __future__ import annotations
 
 import numpy as np
@@ -35,7 +35,7 @@ def main() -> int:
     dem[hits] = rng.integers(1, 8, size=18)
     crost = croston_like(dem)
     naive = dem.mean()
-    print(f"  intermittent  croston≈{crost:.3f}  mean_naive={naive:.3f}  nonzero_rate={ (dem>0).mean():.1%}")
+    print(f"  intermittent  croston?{crost:.3f}  mean_naive={naive:.3f}  nonzero_rate={ (dem>0).mean():.1%}")
 
     # cold-start new SKU: borrow from similar attributes
     catalog = pd.DataFrame({
@@ -51,7 +51,7 @@ def main() -> int:
     dist, idx = nn.kneighbors(new)
     proxy = float(catalog.iloc[idx[0]]["avg_daily"].mean())
     print(f"  cold_start_proxy_avg_daily={proxy:.2f}  neighbor_dists={np.round(dist[0], 2)}")
-    print("OK cold_start_alchemist — intermittent + attribute neighbors transmuted")
+    print("OK cold_start_alchemist - intermittent + attribute neighbors transmuted")
     return 0
 
 

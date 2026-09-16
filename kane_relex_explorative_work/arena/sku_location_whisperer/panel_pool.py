@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""sku_location_whisperer — sparse SKU-location panel + hierarchical pooling."""
+"""sku_location_whisperer - sparse SKU-location panel + hierarchical pooling."""
 from __future__ import annotations
 
 import numpy as np
@@ -21,7 +21,7 @@ def make_panel(n_sku: int = 12, n_loc: int = 8, n_days: int = 180, seed: int = 2
     rows = []
     for s, sb in sku_effect.items():
         for loc, lb in loc_effect.items():
-            # late-start / sparse cells → local history thin
+            # late-start / sparse cells -> local history thin
             start_delay = int(rng.choice([0, 0, 50, 90, 130], p=[0.3, 0.15, 0.2, 0.2, 0.15]))
             sparse_mult = float(rng.choice([1.0, 0.25, 0.08], p=[0.45, 0.35, 0.2]))
             base = sb * lb * sparse_mult
@@ -39,7 +39,7 @@ def hierarchical_predict(train: pd.DataFrame, test: pd.DataFrame, prior_strength
     g = float(train["units"].mean())
     sku_m = train.groupby("sku")["units"].mean()
     loc_m = train.groupby("location")["units"].mean()
-    # multiplicative prior: E[sku,loc] ≈ sku_mean * (loc_mean / global)
+    # multiplicative prior: E[sku,loc] ? sku_mean * (loc_mean / global)
     prior = test["sku"].map(sku_m).fillna(g) * (test["location"].map(loc_m).fillna(g) / max(g, 1e-6))
     stats = train.groupby("sku_location")["units"].agg(["mean", "count"])
     local = test["sku_location"].map(stats["mean"])
@@ -85,7 +85,7 @@ def main() -> int:
         )
     sparse_share = float((train.groupby("sku_location")["units"].mean() < 1).mean())
     print(f"  sparse_sku_loc_share={sparse_share:.2%}")
-    print("OK sku_location_whisperer — sparse panel pooling done")
+    print("OK sku_location_whisperer - sparse panel pooling done")
     return 0
 
 

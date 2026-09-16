@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""sql_in_python_cosplay — pandas window equivalents interviewers love."""
+"""sql_in_python_cosplay - pandas window equivalents interviewers love."""
 from __future__ import annotations
 
 import numpy as np
@@ -32,7 +32,7 @@ def main() -> int:
     last7 = df[df["rn"] > df.groupby(["sku", "loc"])["rn"].transform("max") - 7]
     print(f"  rows={len(df)}  last7_rows={len(last7)}  lag1_nulls={df['lag1'].isna().sum()}")
     print(f"  sample roll7 mean={df['roll7'].mean():.1f}  distinct vol_ranks={df['vol_rank'].nunique()}")
-    print("OK sql_in_python_cosplay — windows without a database")
+    print("OK sql_in_python_cosplay - windows without a database")
     return 0
 
 

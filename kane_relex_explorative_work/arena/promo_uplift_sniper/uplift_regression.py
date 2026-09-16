@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""promo_uplift_sniper — before/after + regression with confounders."""
+"""promo_uplift_sniper - before/after + regression with confounders."""
 from __future__ import annotations
 
 import numpy as np
@@ -38,7 +38,7 @@ def main() -> int:
     reg = LinearRegression().fit(X, y)
     print(f"  regression_uplift (promo coef)={reg.coef_[0]:.2f}  intercept={reg.intercept_:.2f}")
     print(f"  other coefs weekend={reg.coef_[1]:.2f} price={reg.coef_[2]:.2f} weather={reg.coef_[3]:.2f}")
-    print("OK promo_uplift_sniper — confounders clipped, uplift sniped")
+    print("OK promo_uplift_sniper - confounders clipped, uplift sniped")
     return 0
 
 

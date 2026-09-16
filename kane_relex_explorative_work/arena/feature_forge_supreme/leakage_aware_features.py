@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""feature_forge_supreme — calendar, lag, rolling; time-split without leakage."""
+"""feature_forge_supreme - calendar, lag, rolling; time-split without leakage."""
 from __future__ import annotations
 
 import numpy as np
@@ -50,13 +50,13 @@ def main() -> int:
     split = int(len(feat) * 0.8)
     train, test = feat.iloc[:split], feat.iloc[split:]
     cols = [c for c in feat.columns if c not in ("date", "units")]
-    # intentional bad example: using future info would inflate — we don't
+    # intentional bad example: using future info would inflate - we don't
     model = HistGradientBoostingRegressor(max_iter=80, max_depth=3, random_state=0)
     model.fit(train[cols], train["units"])
     pred = model.predict(test[cols])
     print(f"  features={len(cols)}  holdout_WMAPE={wmape(test['units'], pred):.4f}")
-    print("  note: rollings use shift(1) so no same-day leakage — interview gold")
-    print("OK feature_forge_supreme — calendar+lag+rolling forged cleanly")
+    print("  note: rollings use shift(1) so no same-day leakage - interview gold")
+    print("OK feature_forge_supreme - calendar+lag+rolling forged cleanly")
     return 0
 
 

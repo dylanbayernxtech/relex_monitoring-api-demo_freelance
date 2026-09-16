@@ -16,3 +16,7 @@ python arena\interview_warmachine\run_all.py
 
 ## Arena packs
 See `arena/README.md`.
+
+## Deliverable style (RELEX senior)
+
+See DELIVERABLE-STYLE.md: **scripts-first**, notebook-only is a weak senior signal. Default tomorrow = runnable .py + WMAPE/bias + time split.

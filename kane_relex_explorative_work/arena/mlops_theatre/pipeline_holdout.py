@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""mlops_theatre — train/save/load sklearn pipeline + time holdout (Vertex AI cosplay)."""
+"""mlops_theatre - train/save/load sklearn pipeline + time holdout (Vertex AI cosplay)."""
 from __future__ import annotations
 
 import tempfile
@@ -56,8 +56,8 @@ def main() -> int:
         pred2 = loaded.predict(test[feats])
         assert np.allclose(pred, pred2)
         print(f"  saved+loaded {path.name}  preds_match=True")
-    print("  protocol: time-ordered holdout → fit pipeline → artifact → reload smoke")
-    print("OK mlops_theatre — Vertex-flavored theatre, real sklearn bones")
+    print("  protocol: time-ordered holdout -> fit pipeline -> artifact -> reload smoke")
+    print("OK mlops_theatre - Vertex-flavored theatre, real sklearn bones")
     return 0
 
 

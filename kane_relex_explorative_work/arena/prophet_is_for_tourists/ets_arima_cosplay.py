@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""prophet_is_for_tourists — ETS / ARIMA-ish via statsmodels (no Prophet)."""
+"""prophet_is_for_tourists - ETS / ARIMA-ish via statsmodels (no Prophet)."""
 from __future__ import annotations
 
 import numpy as np
@@ -34,13 +34,13 @@ def main() -> int:
     yhat_ets = ets.forecast(len(test))
     print(f"  ETS (HW)   WMAPE={wmape(test, yhat_ets):.4f}")
 
-    # light SARIMA — small order for speed
+    # light SARIMA - small order for speed
     sar = SARIMAX(train, order=(1, 0, 1), seasonal_order=(1, 0, 1, 7),
                   enforce_stationarity=False, enforce_invertibility=False)
     sar_fit = sar.fit(disp=False)
     yhat_sar = sar_fit.forecast(len(test))
     print(f"  SARIMAX    WMAPE={wmape(test, yhat_sar):.4f}")
-    print("OK prophet_is_for_tourists — ETS + SARIMAX without tourist Prophet")
+    print("OK prophet_is_for_tourists - ETS + SARIMAX without tourist Prophet")
     return 0
 
 

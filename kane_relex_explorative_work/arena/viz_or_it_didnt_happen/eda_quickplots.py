@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""viz_or_it_didnt_happen — matplotlib EDA plots (Agg, no display required)."""
+"""viz_or_it_didnt_happen - matplotlib EDA plots (Agg, no display required)."""
 from __future__ import annotations
 
 from pathlib import Path
@@ -42,7 +42,7 @@ def main() -> int:
     fig.savefig(path, dpi=100)
     plt.close(fig)
     print(f"  wrote {path}")
-    print("OK viz_or_it_didnt_happen — if you didn't plot it, it didn't happen")
+    print("OK viz_or_it_didnt_happen - if you didn't plot it, it didn't happen")
     return 0
 
 

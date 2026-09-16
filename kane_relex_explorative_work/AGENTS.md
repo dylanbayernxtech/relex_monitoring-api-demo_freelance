@@ -26,3 +26,6 @@ SKU-location, service level vs inventory, intermittency, cold-start/newness, pro
 - `bootstrap-windows.ps1` — create Windows `.venv` + pip install
 
 When helping Dylan: keep answers interview-ready, metric-aware (not RMSE-only), and tied to retail replenishment reality.
+
+## Interview artifact bias
+Prefer modular runnable Python over notebook-only solutions. See DELIVERABLE-STYLE.md.

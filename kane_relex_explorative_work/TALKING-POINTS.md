@@ -47,3 +47,6 @@ Say these out loud once. Pick **3 insights** + **2 questions** for the room.
 ## 30-second opener (optional)
 
 > “I’m excited by RELEX because the hard problem isn’t only predicting units — it’s turning probabilistic demand into replenishment and promo decisions under waste, service level, and supply constraints, at SKU-location scale. I’ve prepped around WMAPE/bias, promo uplift, and safety-stock thinking, and I’d love to dig into how your Labs / product teams evaluate models in production.”
+
+## Process flex
+If asked how you would deliver: explore fast, then freeze a small module with a CLI entrypoint — notebooks are for narrative, not the source of truth in a plugin-forecasting shop.

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""interview_warmachine — timed mini-challenges runner for all arena drills."""
+"""interview_warmachine - timed mini-challenges runner for all arena drills."""
 from __future__ import annotations
 
 import subprocess
@@ -46,7 +46,7 @@ def main() -> int:
     if failed:
         print("  FAIL list:", ", ".join(failed))
         return 1
-    print("OK interview_warmachine — all drills green")
+    print("OK interview_warmachine - all drills green")
     return 0
 
 

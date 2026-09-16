@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""oracle_of_wmape — seasonal naive vs HistGradientBoosting; WMAPE + bias."""
+"""oracle_of_wmape - seasonal naive vs HistGradientBoosting; WMAPE + bias."""
 from __future__ import annotations
 
 import numpy as np
@@ -63,7 +63,7 @@ def main() -> int:
     yhat_ml = model.predict(Xte)
     print(f"  HistGBR         WMAPE={wmape(test['units'].to_numpy(), yhat_ml):.4f}  "
           f"bias={bias(test['units'].to_numpy(), yhat_ml):+.4f}")
-    print("OK oracle_of_wmape — baselines + HGBR duel complete")
+    print("OK oracle_of_wmape - baselines + HGBR duel complete")
     return 0
 
 

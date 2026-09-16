@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""pandas_black_belt — groupby, merge_asof, resample on messy retail tables."""
+"""pandas_black_belt - groupby, merge_asof, resample on messy retail tables."""
 from __future__ import annotations
 
 import numpy as np
@@ -53,7 +53,7 @@ def main() -> int:
     print("  top SKU-locations by volume:")
     for _, r in top.iterrows():
         print(f"    {r['sku']}@{r['location']}: {int(r['units'])}")
-    print("OK pandas_black_belt — groupby/resample/merge_asof landed")
+    print("OK pandas_black_belt - groupby/resample/merge_asof landed")
     return 0
 
 
