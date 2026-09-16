@@ -22,3 +22,6 @@ cd "...\kane_relex_explorative_work"
 
 ## Notebook
 Kernel: **Python (relex-ds)**. Only if they require .ipynb. Default artifact = runnable .py (FINLAND-BAR.md).
+
+## Opening impression
+Start with kane_relex_explorative_work/interview_desk.ipynb open (kernel **Python (relex-ds)**). Still ship a runnable .py if that is the bar — notebook is the stage set.

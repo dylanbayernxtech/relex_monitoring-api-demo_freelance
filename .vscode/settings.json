@@ -1,6 +1,6 @@
 {
     "python.analysis.typeCheckingMode": "basic",
-    "python.defaultInterpreterPath": "C:\\Users\\Dylan Kane\\.venvs\\relex-ds\\Scripts\\python.exe",
+    "python.defaultInterpreterPath": "C:\\\\Users\\\\Dylan Kane\\\\.venvs\\\\relex-ds\\\\Scripts\\\\python.exe",
     "editor.formatOnSave": true,
     "[python]": {
         "editor.defaultFormatter": "ms-python.black-formatter",
@@ -21,7 +21,9 @@
         }
     },
     "python.terminal.activateEnvironment": true,
-    "terminal.integrated.defaultProfile.windows": "PowerShell",
+    "terminal.integrated.defaultProfile.windows": "Git Bash",
     "github.gitProtocol": "https",
-    "git.autofetch": true
+    "git.autofetch": true,
+    "notebook.defaultKernel": "Python (relex-ds)",
+    "jupyter.kernels.filter": []
 }
